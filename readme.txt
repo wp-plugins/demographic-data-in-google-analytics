@@ -5,8 +5,8 @@ Tags: Analytics, Google, javascript, google analytics, custom variables, UserRep
 Plugin link: http://www.userreport.com/userreport-wordpress-plugin/
 Requires at least: 2.7
 Tested up to: 3.1.1
-Version: 1.0.0
-Stable tag: 1.0.0
+Version: 1.0.3
+Stable tag: 1.0.3
 
 == Description ==
 This plugin adds the required javascript for the UserReport-service which will enable you to transfer background information about your visitors to google analytics.
@@ -22,8 +22,8 @@ Or visit the [Wordpress plugin homepage on UserReport](http://www.userreport.com
 == Installation ==
 This section describes how to install the plugin:
 
-1. Upload the 'DGA.zip' file to the `/wp-content/plugins/` directory.
-2. Unzip the 'DGA.zip' which will create the folder to the directory `/wp-content/plugins/DGA`
+1. Upload the 'demographic-data-in-google-analytics.zip' file to the `/wp-content/plugins/` directory.
+2. Unzip the 'demographic-data-in-google-analytics.zip' which will create the folder to the directory `/wp-content/plugins/DGA`
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. Configure the plugin through 'DGA (UserReport)' submenu in the the 'Settings' section of the Wordpress administrator menu
 5. Add your UserReport code snippet 
@@ -42,10 +42,14 @@ Yes, we have created a support forum to help answers any questions relating to t
 [Click here to go to our Wordpress Plugin support forum](http://www.userreport.com/support-and-news/forum/#/categories/wordpress-plugin)
 
 == Screenshots ==
-1. Screenshot of the custom variables in Google Analytics
-2. Screenshot of the custom variables in Google Analytics
-3. Screenshot of the basic settings panel for this plugin
+
+1. Screenshot of the custom variables in Google Analytics.
+2. Screenshot of the custom variables in Google Analytics.
+3. Screenshot of the basic settings panel for this plugin.
 
 == Changelog ==
 = version 1.0.0 =
 * First released version
+
+= version 1.0.3 =
+* Fixed versionen screwup - 1.0.0 was referred to as 1.0.2
