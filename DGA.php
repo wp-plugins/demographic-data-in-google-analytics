@@ -2,8 +2,8 @@
 /*
 Plugin Name: Demographic data in Google Analytics
 Plugin URI:  http://www.userreport.com/userreport-wordpress-plugin/
-Description: A Plugin to add UserReport Analytics code on your pages, thus enabling the ability to transfer user data to Google Analytics. You simply enter your UserReport code snippet.
-Version: 1.0.3
+Description: A Plugin to add UserReport Analytics code on your pages, enabling the ability to transfer user data to Google Analytics.
+Version: 1.0.5
 Author: UserReport
 Author URI: http://www.userreport.com
 */
@@ -41,29 +41,29 @@ function DGA_settings() {
 			<h2><?php _e('Demographic data in Google Analytics', 'DGA') ; ?></h2>
 			<p>
 				<?php
-					_e('This plugin allows you to easily add your UserReport code snippet to all your WordPress pages which will enable you to transfer background information about your visitors to google analytics. <br>If you do not have a code snippet, follow the 3 simple steps outlined below to get one:', 'DGA') ;
-					echo '<br/>' ;
-					_e('<li>Go to UserReport.com and create a free account</li><li>After your free UserReport account has been created, you will be asked to register your website (after completing this task, you will get a codesnippet).</li><li>Copy-paste the code snippet into the textbox below and save your changes.</li>', 'DGA') ;
+					_e('The plugin allows you to easily add your UserReport code snippet to all your WordPress pages which will enable you to transfer background information about your visitors to google analytics. <br>If you do not have a code snippet, follow the 3 simple steps outlined below to get one:', 'DGA') ;
+					echo '<br/><br/>' ;
+					_e('1. Go to <a href="http://www.userreport.com/?utm_source=Wordpress&utm_medium=Plugin&utm_campaign=GA" target="_blank">UserReport.com</a> and create a free account</br>2. After your free UserReport account has been created - register your website (after completing this task you will get the code-snippet).</br>3. Copy-paste the code snippet into the text box below and save your changes.', 'DGA') ;
 					echo '' ;
+					_e('<br/><br/><b>Important!</b> The UserReport script is disabled when you are logged in to your Wordpress account. In order to test - logout first - and then re-visit your website.', 'DGA') ;
 					_e('', 'DGA') ;
 				?>
 			</p>
-	
+	<h2>Let's get started</h2><br/><i>Insert your UserReport code snippet below:</i></br>  
 			<form method="post" action="options.php" id="google_form">
 				<?php settings_fields('sga-settings-group'); ?>
 		
 				<table class="form-table">
 					<tr valign="top">					
-					<textarea name="analytics_id" rows="2" cols="120"><?php echo get_option('analytics_id');?></textarea>
-					<br>Still unsure where to get the code snippet from? <a href="http://www.userreport.com/userreport-wordpress-plugin/" target="_blank">Click here</a> for more detailed instrictions.	
+					<textarea name="analytics_id" rows="8" cols="100"><?php echo get_option('analytics_id');?></textarea><p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>	
 					</tr>
 				</table>
-				<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
 			</form>
-		
 			<p>
 				<?php
-					_e('<b>If you need any help?</b><br>Please <a href="http://www.userreport.com/support-and-news/forum/#/categories/wordpress-plugin" target="_blank">go to our friendly support forum</a>', 'DGA') ;
+					_e('<b>If you need any help?</b><br>
+					- Still a bit unsure about where to get the code snippet from? <a href="http://www.userreport.com/userreport-wordpress-plugin/?utm_source=Wordpress&utm_medium=Plugin&utm_campaign=GA" target="_blank">Click here to read more detailed instructions</a> .
+					<br>- Or <a href="http://www.userreport.com/support-and-news/forum/#/categories/wordpress-plugin" target="_blank">go to our friendly support forum</a> and submit your questions.', 'DGA') ;
 					echo '<br/><br/>' ,
 						 '' ,
 						 '' ;
@@ -77,7 +77,21 @@ function DGA_settings() {
 	<?php
 }
 	
-	add_action('wp_head', 'DGA_function');
+	
+	function DGA_function() {
+	
+	if ( is_user_logged_in() ) {
+	
+	/* User is logged in - suppress script */
+	
+	} 
+	else 
+	{
+	/* User is not logged in - execute script */
+	echo get_option('analytics_id');
+	}
+	}
 
-	function DGA_function() {echo get_option('analytics_id');}
+	add_action('wp_footer', 'DGA_function',1)
+	
 ?>

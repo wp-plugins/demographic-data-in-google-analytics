@@ -4,20 +4,20 @@ Contributors: userreport
 Tags: Analytics, Google, javascript, google analytics, custom variables, UserReport
 Plugin link: http://www.userreport.com/userreport-wordpress-plugin/
 Requires at least: 2.7
-Tested up to: 3.1.1
-Version: 1.0.3
-Stable tag: 1.0.3
+Tested up to: 3.4.1
+Version: 1.0.4
+Stable tag: 1.0.4
 
 == Description ==
 This plugin adds the required javascript for the UserReport-service which will enable you to transfer background information about your visitors to google analytics.
 
-'Demographic data in Google Analytics' supports transfering up to 5 custom variables into google analytics. The google analytics custom variables can contain information such as: Gender, Age, Education and much more. The demografic data tranfered to google analytics is collected using the free UserReport service.
+'Demographic data in Google Analytics' supports transferring up to 5 custom variables into google analytics. The google analytics custom variables can contain information such as: Gender, Age, Education and much more. The demographic data transferred to google analytics is collected using the free UserReport service.
 
 This plugin does not provide the tracking code for Google Analytics. For that you will need to use a plugin like [Google Analytics for WordPress](http://wordpress.org/extend/plugins/google-analytics-for-wordpress/).
 
 For more information, visit the google analytics app gallery post [Get demographic data in Google Analytics with UserReport](http://www.google.com/analytics/apps/about?app_id=1174001) where you can learn more about the service
 
-Or visit the [Wordpress plugin homepage on UserReport](http://www.userreport.com/userreport-wordpress-plugin/)
+Or visit the [Wordpress plugin homepage on UserReport](http://www.userreport.com/userreport-wordpress-plugin/?utm_source=Wordpress&utm_medium=Plugin&utm_campaign=GA)
 
 == Installation ==
 This section describes how to install the plugin:
@@ -53,3 +53,6 @@ Yes, we have created a support forum to help answers any questions relating to t
 
 = version 1.0.3 =
 * Fixed versionen screwup - 1.0.0 was referred to as 1.0.2
+
+= version 1.0.4 =
+* Fixed problem with header-conflict appearing at some installations. Script is moved to footer before </body> + script is automatically disabled when logged into Wordpress.
