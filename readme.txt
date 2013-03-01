@@ -5,8 +5,8 @@ Tags: Analytics, Google, javascript, google analytics, custom variables, UserRep
 Plugin link: http://www.userreport.com/userreport-wordpress-plugin/
 Requires at least: 2.7
 Tested up to: 3.4.1
-Version: 1.0.4
-Stable tag: 1.0.4
+Version: 1.0.6
+Stable tag: 1.0.6
 
 == Description ==
 This plugin adds the required javascript for the UserReport-service which will enable you to transfer background information about your visitors to google analytics.
@@ -56,3 +56,6 @@ Yes, we have created a support forum to help answers any questions relating to t
 
 = version 1.0.4 =
 * Fixed problem with header-conflict appearing at some installations. Script is moved to footer before </body> + script is automatically disabled when logged into Wordpress.
+
+= version 1.0.6
+* Removed unicode BOM character that caused some problems.
