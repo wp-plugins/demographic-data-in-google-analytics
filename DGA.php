@@ -3,7 +3,7 @@
 Plugin Name: Demographic data in Google Analytics
 Plugin URI:  http://www.userreport.com/userreport-wordpress-plugin/
 Description: A Plugin to add UserReport Analytics code on your pages, enabling the ability to transfer user data to Google Analytics.
-Version: 1.0.5
+Version: 1.0.6
 Author: UserReport
 Author URI: http://www.userreport.com
 */
