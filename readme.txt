@@ -4,7 +4,7 @@ Contributors: userreport
 Tags: Analytics, Google, javascript, google analytics, custom variables, UserReport
 Plugin link: http://www.userreport.com/userreport-wordpress-plugin/
 Requires at least: 2.7
-Tested up to: 3.4.1
+Tested up to: 3.5.1
 Version: 1.0.6
 Stable tag: 1.0.6
 
