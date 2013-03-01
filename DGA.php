@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: Demographic data in Google Analytics
 Plugin URI:  http://www.userreport.com/userreport-wordpress-plugin/
